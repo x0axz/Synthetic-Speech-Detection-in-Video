@@ -1,12 +1,12 @@
 # Synthetic Speech Detection in Video
 
-lipsync_v4_73.mat: https://www.dropbox.com/sh/5ecqtwuy85nlonb/AADVrCJZzvhmzAc1jKh0a1TBa/lipsync_v4_73.mat
-shape_predictor_68_face_landmarks.dat: https://github.com/GuoQuanhao/68_points/raw/master/shape_predictor_68_face_landmarks.dat
+Download [lipsync_v4_73.mat](https://www.dropbox.com/sh/5ecqtwuy85nlonb/AADVrCJZzvhmzAc1jKh0a1TBa/lipsync_v4_73.mat) and [shape_predictor_68_face_landmarks.dat]( https://github.com/GuoQuanhao/68_points/raw/master/shape_predictor_68_face_landmarks.dat)
 
-Please find the blog link: https://medium.com/@nehasikerwar/syncnet-model-with-vidtimit-dataset-dd9de2cb2fb5
+This Project is forked from this [Repository](https://github.com/Neha13022020/Syncnet_model_VIDTIMIT_dataset) <br>
+Follow this [Blog](https://medium.com/@nehasikerwar/syncnet-model-with-vidtimit-dataset-dd9de2cb2fb5) for step by step explanation.
 
-There is a lot of advancement in video manipulation techniques. And it's a lot easier to create tampered videos, which can fool human eyes. Such content leads to fake news or misinformation.
+Research paper refered throughout this project: https://www.robots.ox.ac.uk/~vgg/publications/2016/Chung16a/chung16a.pdf <br>
+They focused on determining the audio-video synchronization between mouth motion and speech in the video. They used audio-video synchronization for TV broadcasting. It's really a nice research paper, they developed a language-independent and speaker-independent solution to the lip-sync problem, without labeled data. 
 
-So in this project, I tried to detect whether the video is tampered or not, or you can say, real or fake? I referred to research paper - "https://www.robots.ox.ac.uk/~vgg/publications/2016/Chung16a/chung16a.pdf" throughout my project. They focused on determining the audio-video synchronization between mouth motion and speech in the video. They used audio-video synchronization for TV broadcasting. It's really a nice research paper, they developed a language-independent and speaker-independent solution to the lip-sync problem, without labeled data. 
-
-For the modeling and processing functions I referred "https://github.com/voletiv/syncnet-in-keras". Here I used the VidTIMIT dataset (http://conradsanderson.id.au/vidtimit/) for my project. 
+For the modeling and processing functions: https://github.com/voletiv/syncnet-in-keras <br>
+VidTIMIT dataset used in this project: http://conradsanderson.id.au/vidtimit
