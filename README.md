@@ -1,5 +1,8 @@
 # Synthetic Speech Detection in Video
 
+lipsync_v4_73.mat: https://www.dropbox.com/sh/5ecqtwuy85nlonb/AADVrCJZzvhmzAc1jKh0a1TBa/lipsync_v4_73.mat
+shape_predictor_68_face_landmarks.dat: https://github.com/GuoQuanhao/68_points/raw/master/shape_predictor_68_face_landmarks.dat
+
 Please find the blog link: https://medium.com/@nehasikerwar/syncnet-model-with-vidtimit-dataset-dd9de2cb2fb5
 
 There is a lot of advancement in video manipulation techniques. And it's a lot easier to create tampered videos, which can fool human eyes. Such content leads to fake news or misinformation.
