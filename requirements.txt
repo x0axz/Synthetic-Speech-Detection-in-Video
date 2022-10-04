@@ -1,0 +1,14 @@
+flask
+keras
+tensorflow
+panda
+numpy
+scipy
+opencv-python
+speechpy
+moviepy
+h5py
+werkzeug
+wheel
+cmake
+dlib
