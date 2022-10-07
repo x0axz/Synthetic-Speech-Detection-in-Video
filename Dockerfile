@@ -8,7 +8,6 @@ RUN pip install --upgrade pip
 RUN pip install setuptools --upgrade --force
 RUN apt-get update -y
 RUN apt-get install -y build-essential cmake libgtk-3-dev libboost-all-dev
-RUN pip install dilb
 RUN pip install -r requirements.txt
 EXPOSE 80
 ENTRYPOINT ["python", "app.py"]
