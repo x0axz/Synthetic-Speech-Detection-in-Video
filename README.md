@@ -1,4 +1,4 @@
-# Synthetic Speech Detection in Video
+# Synthetic Speech Detection in Video using Deep Learning
 
 Download [lipsync_v4_73.mat](https://www.dropbox.com/sh/5ecqtwuy85nlonb/AADVrCJZzvhmzAc1jKh0a1TBa/lipsync_v4_73.mat) and [shape_predictor_68_face_landmarks.dat]( https://github.com/GuoQuanhao/68_points/raw/master/shape_predictor_68_face_landmarks.dat)
 
