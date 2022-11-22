@@ -45,6 +45,9 @@ def audio_processing(wav_file, verbose=True):
     if verbose:
         print("Sig length: {}, sample_rate: {}".format(len(sig), rate))
 
+    if sig.ndim == 2:
+        sig = np.mean(sig, axis=1)
+
     try:
         mfcc_features = speechpy.feature.mfcc(
             sig, sampling_frequency=rate, frame_length=0.010, frame_stride=0.010)
@@ -684,7 +687,10 @@ def modelprediction(audio, video):
     d = distance_euc(lip_pred, audio_pred)
 
     conf = np.median(d)-min(d)
-    if conf > 3.5:
+
+    print("conf: ", conf)
+
+    if conf > 5:
         ans = 'video is real or non-tampered'
     else:
         ans = 'video is fake or tampered'
@@ -695,15 +701,14 @@ def modelprediction(audio, video):
 @app.route('/predict', methods=["GET", "POST"])
 def upload_files():
     if request.method == 'POST':
-        #print('fetching inputs')
+        # print('fetching inputs')
+
         video = request.files['video']
+        video.save(secure_filename(video.filename))
         audio = convert_mp4_to_wav(video.filename)
 
-        audio.save(secure_filename(audio.filename))
-        video.save(secure_filename(video.filename))
-
         print('got inputs', audio, video)
-        return redirect(url_for('modelprediction', audio=secure_filename(audio.filename), video=secure_filename(video.filename)))
+        return redirect(url_for('modelprediction', audio=secure_filename(audio), video=secure_filename(video.filename)))
     return render_template("index.html")
 
 
