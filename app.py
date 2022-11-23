@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, request, redirect, render_template, url_for
-import pandas as pd
 import numpy as np
 import os
 import cv2
@@ -8,19 +7,12 @@ from keras import backend as K
 from keras.models import Sequential
 from keras.layers import Conv2D, BatchNormalization, Activation, MaxPooling2D
 from keras.layers import Flatten, Dense
-from os import listdir
-from os.path import isfile, join
 import dlib
-import moviepy.editor as mpy
-import wave
 import scipy.io.wavfile as wav
-import contextlib
 import speechpy
 from werkzeug.utils import secure_filename
-from werkzeug.datastructures import FileStorage
 from moviepy.utils import VideoFileClip
 
-# https://www.tutorialspoint.com/flask
 import flask
 app = Flask(__name__)
 
