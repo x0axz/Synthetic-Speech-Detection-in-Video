@@ -10,3 +10,7 @@ They focused on determining the audio-video synchronization between mouth motion
 
 For the modeling and processing functions: https://github.com/voletiv/syncnet-in-keras <br>
 VidTIMIT dataset used in this project: http://conradsanderson.id.au/vidtimit
+
+## License
+
+MIT
